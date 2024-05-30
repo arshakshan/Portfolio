@@ -1,4 +1,4 @@
-# My Portfolio Website
+# Portfolio Website
 Welcome to my portfolio website repository. This project showcases my skills, projects, and experiences in web development, utilizing modern web technologies.
 
 ## Table of Contents
