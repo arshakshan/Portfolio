@@ -1,4 +1,4 @@
-import {useState, useRef} from 'react';
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailJs from '@emailjs/browser';
 
@@ -20,20 +20,20 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    
+
     const { name, value } = e.target;
 
-    setForm({ ...form, [name]: value})
+    setForm({ ...form, [name]: value })
   }
 
   const handleSubmit = (e) => {
-    
+
     e.preventDefault();
     setLoading(true);
 
-  // template_ph9q0ll
-  // service_re2cc7g
-  // yZoU9S90RLZJwuAUt
+    // template_ph9q0ll
+    // service_re2cc7g
+    // yZoU9S90RLZJwuAUt
 
     emailJs.send(
       'service_re2cc7g',
@@ -43,7 +43,7 @@ const Contact = () => {
         to_name: "Arshak",
         from_email: form.email,
         to_email: "arshakshan@gmail.com",
-        message: form.message,
+        message: form.message + "\n\n" + form.name + "\n" + form.email,
       },
       'yZoU9S90RLZJwuAUt'
     ).then(
@@ -52,12 +52,12 @@ const Contact = () => {
         alert("Copy that. I’ll tune in and reply shortly");
 
         setForm({
-          name:'',
-          email:'',
-          message:''
+          name: '',
+          email: '',
+          message: ''
         })
       },
-      (error)=>{
+      (error) => {
         console.log(error);
         alert("Something went wrong")
       }
@@ -81,7 +81,7 @@ const Contact = () => {
         >
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
-            <input 
+            <input
               type="text"
               name="name"
               value={form.name}
@@ -94,7 +94,7 @@ const Contact = () => {
 
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email</span>
-            <input 
+            <input
               type="email"
               name="email"
               value={form.email}
@@ -103,8 +103,8 @@ const Contact = () => {
               className="bg-tertiary py-4 px-6 placeholder:text-secondary 
                         text-white rounded-lg outlined-none border-none font-medium"
             />
-          </label>          
-          
+          </label>
+
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
@@ -138,4 +138,4 @@ const Contact = () => {
   )
 }
 
-export default SectionWrapper(Contact,"contact");
+export default SectionWrapper(Contact, "contact");

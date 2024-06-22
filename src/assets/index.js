@@ -40,6 +40,8 @@ import gyandata from "./company/gyandata.png";
 import hpe from "./company/hpe.png";
 import verzeo from "./company/verzeo.png";
 import tesla from "./company/tesla.png";
+import asu from "./company/asu.png";
+import abr from "./company/abr-bg.png";
 
 import carrent from "./carrent.png";
 import deepfake from "./deepfake.png";
@@ -47,6 +49,12 @@ import covid19 from "./Covid19.png";
 import jobit from "./jobit.png";
 import foodrunner from "./FoodRunner.png";
 import tripguide from "./tripguide.png";
+import ecommerce from "./E-comm.png";
+import portfolio from "./portfolio.png";
+import game from './lights_out.png';
+import lung from './lung-cancer.png';
+import animal from './animal-detection.png';
+import hotel from './hotel-reservation.png';
 
 export {
   logo,
@@ -95,4 +103,12 @@ export {
   aws,
   arshak,
   email,
+  asu,
+  abr,
+  ecommerce,
+  portfolio,
+  game,
+  lung,
+  animal,
+  hotel,
 };

@@ -8,6 +8,8 @@ import { logo, menu, close } from '../assets'
 
 const Navbar = () => {
 
+
+  const [isScrolled, setIsScrolled] = useState(false);
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,9 +30,23 @@ const Navbar = () => {
     return () => clearInterval(interval);
   }, [currentIndex]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroHeight = document.querySelector('.bg-hero-pattern')?.offsetHeight || 0;
+      if (window.scrollY > heroHeight) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${isScrolled ? 'bg-primary' : 'bg-transparent'} `}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
@@ -47,11 +63,11 @@ const Navbar = () => {
             className='w-19 h-10 object-contain'
           />
           <p className={`text-white text-[24px] font-normal cursor-pointer flex fade-text`}>&nbsp;
-            <span className='sm:block hidden'>| {titles[currentIndex]}</span>
+            <span className='lg:block hidden'>| {titles[currentIndex]}</span>
           </p>
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='list-none md:flex hidden flex-row gap-10'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -70,7 +86,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
+        <div className='md:hidden flex flex-1 justify-end items-center'>
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -93,10 +109,10 @@ const Navbar = () => {
                   }}
                 >
                   {nav.title === "Resume" ? (
-                <a href={nav.resumeLink} target="_blank" rel="noopener noreferrer">{nav.title}</a>
-              ) : (
-                <a href={`#${nav.id}`}>{nav.title}</a>
-              )}
+                    <a href={nav.resumeLink} target="_blank" rel="noopener noreferrer">{nav.title}</a>
+                  ) : (
+                    <a href={`#${nav.id}`}>{nav.title}</a>
+                  )}
                 </li>
               ))}
             </ul>
