@@ -42,6 +42,8 @@ import verzeo from "./company/verzeo.png";
 import tesla from "./company/tesla.png";
 import asu from "./company/asu.png";
 import abr from "./company/abr-bg.png";
+import owting from "./company/owting_logo.png";
+import betterdirect from "./company/betterDirect.png";
 
 import carrent from "./carrent.png";
 import deepfake from "./deepfake.png";
@@ -111,4 +113,7 @@ export {
   lung,
   animal,
   hotel,
+  owting,
+  betterdirect
 };
+

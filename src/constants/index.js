@@ -47,7 +47,9 @@ import {
   game,
   lung,
   animal,
-  hotel
+  hotel,
+  owting,
+  betterdirect
 
 } from "../assets";
 
@@ -71,7 +73,7 @@ export const navLinks = [
   {
     id: "resume",
     title: "Resume",
-    resumeLink: "https://drive.google.com/file/d/1CuAF9yKx0OlHI3WV3i3HcI82qTO56A5w/view?usp=sharing"
+    resumeLink: "https://drive.google.com/file/d/1mwaN1DzgzRNfpmBQLsCywY2nE1PLTbaA/view?usp=sharing"
   },
 ];
 
@@ -166,6 +168,7 @@ const experiences = [
       "Conducted extensive Exploratory Data Analysis (EDA) using Python to understand trends and intricacies of the data.",
       "Channeled comprehensive domain knowledge to develop a movie review predictor, tapping into sentiment analysis and natural language processing techniques. ",
     ],
+    company_link: "https://learn.verzeo.in/"
   },
   {
     title: "Applied Deep Learning Intern",
@@ -180,13 +183,14 @@ const experiences = [
       "Seamlessly orchestrated a Docker network to bolster a robust production environment, ensuring scalability and facilitating seamless integration through cloud deployment in Microsoft Azure.",
       "Advocated and utilized agile practices, utilizing project management software and Kanban boards to keep a tab on the project's trajectory and ensuring timely deliverables.",
     ],
+    company_link: "https://www.hpe.com/sg/en/home.html"
   },
   {
     title: "Data Science/Machine Learning Intern",
     company_name: "GyanData Pvt. Ltd, Chennai, India",
     icon: gyandata,
     iconBg: "#383E56",
-    date: "August 2021 - February 2022",
+    date: "Aug 2021 - Feb 2022",
     points: [
       "Performed predictive maintenance across a key project encompassing the collection of data patterns for predicting machine failures by FFT analysis and developed a web Dashboard for simulation using panel library in python.",
       "Devised and developed an Image Classification system for retail items through AWS",
@@ -194,6 +198,7 @@ const experiences = [
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
+    company_link: "https://gyandata.com/"
   },
   {
     title: "Graduate Service Assistant",
@@ -208,7 +213,8 @@ const experiences = [
       "Executed additional responsibilities as delegated by faculty supervisors, including but not limited to, academic support and operational tasks for 1.5 years.",
       "Utilized Microsoft VB Scripts within Excel to streamline data management and automate routine tasks, improving operational efficiency.",
       "Developed and implemented solutions using Prolog, C++, and Racket to address specific academic and administrative challenges, demonstrating a strong proficiency in programming."
-    ]
+    ],
+    company_link: "https://www.asu.edu/"
   },
   {
     title: "Web Application Developer",
@@ -218,15 +224,44 @@ const experiences = [
     date: "Jan 2024 - May 2024",
     points: [
       "Designed comprehensive Figma wireframes for web app mockups, meticulously planning the user interface and user experience to ensure intuitive navigation and accessibility, resulting in a 25% reduction in user navigation time and increased user satisfaction.",
-      "Transformed the legacy ABR AI Windows BIM software into a modern, web-based platform using Next.js, enhancing functionality and user accessibility. This modernization led to a 30% increase in user engagement among approximately 100 users by providing a more seamless and efficient user experience.",
-      "Utilized advanced graphical rendering techniques with WebGL, Three.js, and React Three Fiber to parse JSON data containing over 10,000 coordinate entries. This effort developed an interactive 3D viewer for complex electrical circuits, significantly improving the user’s ability to visualize and interact with the data.",
+      "Transformed the legacy ABR AI Windows BIM software into a modern, web-based platform using Next.js, enhancing functionality and user accessibility.",
+      "Witnessed to a 30% increase in user engagement among approximately 100 users by providing a more seamless and efficient user experience.",
+      "Utilized advanced graphical rendering techniques with WebGL, Three.js, and React Three Fiber to parse JSON data containing over 10,000 coordinate entries.",
       "Conducted extensive user testing and gathered feedback to iterate on design improvements, ensuring the final product met user needs and expectations.",
-      "Implemented responsive design principles to ensure the web application performed well across various devices and screen sizes, broadening accessibility.",
       "Integrated real-time data updates to keep the 3D viewer information current, enhancing the accuracy and reliability of the visualized circuits.",
-      "Optimized data handling and visualization by improving how materials were applied to each item, reducing response times by over 30 seconds (40% improvement). This was achieved through targeted performance enhancements that streamlined data processing for more than 500 unique material applications.",
+      "Optimized data handling and visualization by improving how materials were applied to each item, reducing response times by over 30 seconds (40% improvement).",
       "Employed Agile methodologies, including regular sprint reviews and retrospectives, to manage the project efficiently and ensure timely delivery of features.",
-    ]
+    ],
+    company_link: "https://autobimroute.com/"
+  },
+  {
+    title: "Full Stack Developer",
+    company_name: "Owting",
+    icon: owting,
+    iconBg: "#6FC9E8",
+    date: "Jun 2024 - Sep 2024",
+    points: [
+      "Developing a GCP Cloud Function using Python, triggering the Vision API for explicit image detection, automating the assessment and categorization of uploaded images with a 95% detection accuracy.",
+      "Building an API with NestJs and Typescript that communicates with the Cloud Function, processes Vision API results, and returns the outcome to the user within 5s, significantly enhancing platform response time.",
+      "Configuring Cloud Function to securely transfer non-explicit images to a dedicated bucket, ensuring 100% compliance with content safety regulations and seamless downstream processing.",
+      "Implementing backend logic in NestJs to flag explicit images, with the data logged in BigQuery for future analysis and review, contributing to a 20% improvement in content monitoring efficiency."
+    ],
+    company_link: "https://owting.com/"
+  },
+  {
+    title: "Software Developer",
+    company_name: "Better Direct",
+    icon: betterdirect,
+    iconBg: "#FFFFFF",
+    date: "Sep 2024 - Present",
+    points: [
+      "Leading the development of an in-house CRM platform to improve uptime, security, and control, while automating data integration from federal agencies and centralizing sales, opportunities, and account management.",
+      "Implementing core sales lifecycle features, including quote generation, purchase orders, and invoices, along with opportunity forecasting and comprehensive reporting tools to empower the sales team with data-driven decisions.",
+      "Enhancing system security using role-based access control (RBAC), multi-factor authentication, and document version control ensuring compliance with security standards and improving collaboration through real-time notifications and task tracking."
+    ],
+    company_link: "https://betterdirect.com/"
   }
+
 ];
 
 const testimonials = [

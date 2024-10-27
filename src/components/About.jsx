@@ -53,7 +53,7 @@ const About = () => {
           Recently Graduated with a Masters Degree in software engineering with complementary certifications, including deep learning, AI/ML, Machine Learning, and Web / App Development. A proven track record in pivotal projects, such as deepfake detection, retail image classification, and fault detection, showcasing programming, problem-solving and project management.
         </motion.p>
 
-        <div className="mt-20 flex flex-wrap gap-10">
+        <div className="mt-20 flex flex-wrap justify-center gap-10">
           {services.map((service, index) => (
             <ServiceCard
               key={service.title}
